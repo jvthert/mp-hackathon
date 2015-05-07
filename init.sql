@@ -23,8 +23,9 @@ CREATE TABLE item (
 
 CREATE TABLE appraisal (
 	item_id int(11) NOT NULL,
+	user_id int(11) NOT NULL,
 	price int(11) NOT NULL DEFAULT '0'
-) ENGINE InnoDB DEFAULT CHARSET=utf8; 
+) ENGINE InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO item (id, title, photo, description) VALUES (1, 'iphone5', 'http://i.marktplaats.com/00/s/MzAwWDIwOQ==/$T2eC16N,!)EE9s2ufhNfBROt4hL7YQ~~60_84.JPG', '');
 INSERT INTO item (id, title, photo, description) VALUES (2, 'samsung galaxy s5', 'http://i.marktplaats.com/00/s/Mjk0WDI5NA==/z/P10AAOSwstxVBww-/$_84.JPG', '');
