@@ -1,4 +1,5 @@
-from flask import Flask, request, jsonify, redirect
+import os
+from flask import Flask, request, jsonify
 from hackathon.mysql_util import within_conn
 
 app = Flask(__name__)
@@ -9,21 +10,23 @@ USER_NAME_COOKIE = 'mp-hackathon-username'
 POS_COOKIE = 'mp-hackathon-pos'
 
 
+URL_PREFIX = os.getenv("URL_PREFIX", "/api")
+
 @app.route('/')
 def root():
     return app.send_static_file('index.html')
 
-@app.route('/<path:path>')
+@app.route('%s/<path:path>' % URL_PREFIX)
 def static_proxy(path):
     # send_static_file will guess the correct MIME type
     return app.send_static_file(path)
 
-@app.route('/enter_with_get', methods=['GET'])
+@app.route('%s/enter_with_get' % URL_PREFIX, methods=['GET'])
 def enter_user_with_get():
     name = request.args['name']
     return register(name)
 
-@app.route('/register', methods=['POST'])
+@app.route('%s/register' % URL_PREFIX, methods=['POST'])
 def enter_user():
     name = request.values['name']
     return register(name)
@@ -41,7 +44,7 @@ def register(name):
     return response
 
 
-@app.route('/item')
+@app.route('%s/item' % URL_PREFIX)
 def item():
     pos = int(request.cookies.get(POS_COOKIE, 0))
     size = items_count()
@@ -58,7 +61,7 @@ def item():
     out.set_cookie(POS_COOKIE, str(pos + 1))
     return out
 
-@app.route("/answer", methods=['POST'])
+@app.route("%s/answer" % URL_PREFIX, methods=['POST'])
 def appriase():
     user_id = request.cookies.get(USER_ID_COOKIE)
     item_id = request.values['id']
