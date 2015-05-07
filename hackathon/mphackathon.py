@@ -90,8 +90,8 @@ def results(user_id):
             "title": result[0],
             "photo": result[1],
             "guess": int(result[2]),
-            "numResults": int(result[3]),
-            "avg": int(result[4]),
+            "avg": int(result[3]),
+            "numResults": int(result[4])
         }
 
     json = map(lambda r: to_json(r), result_list)
