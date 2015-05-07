@@ -33,3 +33,4 @@ INSERT INTO item (id, title, photo, description) VALUES (3, 'Nieuwe Transportfie
 INSERT INTO item (id, title, photo, description) VALUES (4, 'antiek rond tafel', 'http://i.marktplaats.com/00/s/NzI2WDU0NQ==/z/GXwAAOSwBahVSy9t/$_84.JPG', 'Doorsnee 27,5 cm en 54 cm hoog. Het bovenblad kan rondgedraaid worden');
 INSERT INTO item (id, title, photo, description) VALUES (5, 'Abstract schilderij', 'http://i.marktplaats.com/00/s/NjAwWDgwMA==/z/I-oAAOSwEeFVSxzI/$_84.JPG', '60x80 cm');
 INSERT INTO item (id, title, photo, description) VALUES (6, '6-persoons Zilver Bestek', 'http://i.marktplaats.com/00/s/OTk1WDEwMjQ=/z/61gAAOSwrklVSzRw/$_84.JPG', '890 gram, gemerkt met BSF.');
+INSERT INTO item (id, title, photo, description) VALUES (6, 'Racing bike', '/img/bike1.jpeg', 'Looks cool, rides smooth');
