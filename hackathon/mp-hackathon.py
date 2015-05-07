@@ -27,15 +27,19 @@ def hello_world():
 @app.route('/enter_with_get', methods=['GET'])
 def enter_user_with_get():
     name = request.args['name']
-    redirect_to_index = redirect('/item')
-    response = app.make_response(redirect_to_index )
-    response.set_cookie('mp-hackaton-user',value=name)
-    return response
-
+    return register(name)
 
 @app.route('/register', methods=['POST'])
 def enter_user():
     name = request.form['name']
+    return register(name)
+
+def register(name):
+    def db_action(cnx, cursor):
+        insert_query = "INSERT INTO user VALUES (NULL, '%s')" % name
+        cursor.execute(insert_query)
+    within_conn(lambda cnx, cursor: db_action(cnx, cursor))
+
     redirect_to_index = redirect('/item')
     response = app.make_response(redirect_to_index )
     response.set_cookie('mp-hackaton-user',value=name)
