@@ -78,7 +78,7 @@ def items_count():
 
 def load_item(pos):
     def db_action(cnx, cursor):
-        query = "SELECT * FROM item LIMIT %s, %s" % (pos, pos + 1)
+        query = "SELECT * FROM item LIMIT %s, %s" % (pos, 1)
         cursor.execute(query)
         return cursor.fetchone()
 
