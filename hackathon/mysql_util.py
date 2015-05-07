@@ -8,6 +8,7 @@ MYSQL_PASSWORD = 'root123'
 MYSQL_HOST = 'localhost'
 MYSQL_DB = 'abc'
 
+
 def within_conn(block):
     cnx = mysql.connector.connect(user=MYSQL_USER, password=MYSQL_PASSWORD, database=MYSQL_DB, host=MYSQL_HOST)
     cursor = cnx.cursor()
