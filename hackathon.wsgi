@@ -1,1 +1,1 @@
-from hackathon import mp-hackathon as application
+from hackathon import mphackathon as application
