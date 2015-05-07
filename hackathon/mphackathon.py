@@ -20,10 +20,6 @@ def load_item(pos):
     return within_conn(lambda cnx, cursor: db_action(cnx, cursor))
 
 
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
-
 @app.route('/enter_with_get', methods=['GET'])
 def enter_user_with_get():
     name = request.args['name']
@@ -31,7 +27,7 @@ def enter_user_with_get():
 
 @app.route('/register', methods=['POST'])
 def enter_user():
-    name = request.form['name']
+    name = request.values['name']
     return register(name)
 
 def register(name):
