@@ -43,7 +43,8 @@ def register(name):
 def item():
     pos = int(request.cookies.get(POS_COOKIE, 0))
     size = items_count()
-    pos %= size
+    if pos >= size:
+        return "No more items", 404
     current_item = load_item(pos)
     out = jsonify({"title": current_item[1], "photo": current_item[2], "description": current_item[3]})
     out.set_cookie(POS_COOKIE, str(pos + 1))
