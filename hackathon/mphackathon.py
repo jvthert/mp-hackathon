@@ -4,7 +4,8 @@ from hackathon.mysql_util import within_conn
 app = Flask(__name__)
 app.config['PROPAGATE_EXCEPTIONS'] = True
 
-USER_COOKIE = 'mp-hackathon-user'
+USER_ID_COOKIE = 'mp-hackathon-userid'
+USER_NAME_COOKIE = 'mp-hackathon-username'
 POS_COOKIE = 'mp-hackathon-pos'
 
 
@@ -35,7 +36,8 @@ def register(name):
     user_id = within_conn(lambda cnx, cursor: db_action(cnx, cursor))
 
     response = app.make_response("")
-    response.set_cookie(USER_COOKIE, value=str(user_id))
+    response.set_cookie(USER_ID_COOKIE, value=str(user_id))
+    response.set_cookie(USER_NAME_COOKIE, value=name)
     return response
 
 
