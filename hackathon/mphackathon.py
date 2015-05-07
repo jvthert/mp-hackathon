@@ -60,7 +60,7 @@ def item():
 
 @app.route("/answer", methods=['POST'])
 def appriase():
-    user_id = request.cookies.get(USER_COOKIE)
+    user_id = request.cookies.get(USER_ID_COOKIE)
     item_id = request.values['id']
     price = request.values['price']
 
