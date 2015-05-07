@@ -17,12 +17,12 @@ def static_proxy(path):
     # send_static_file will guess the correct MIME type
     return app.send_static_file(path)
 
-@app.route('/api/enter_with_get', methods=['GET'])
+@app.route('/enter_with_get', methods=['GET'])
 def enter_user_with_get():
     name = request.args['name']
     return register(name)
 
-@app.route('/api/register', methods=['POST'])
+@app.route('/register', methods=['POST'])
 def enter_user():
     name = request.values['name']
     return register(name)
@@ -39,7 +39,7 @@ def register(name):
     return response
 
 
-@app.route('/api/item')
+@app.route('/item')
 def item():
     pos = int(request.cookies.get(POS_COOKIE, 0))
     size = items_count()
@@ -56,7 +56,7 @@ def item():
     out.set_cookie(POS_COOKIE, str(pos + 1))
     return out
 
-@app.route("/api/answer", methods=['POST'])
+@app.route("/answer", methods=['POST'])
 def appriase():
     user_id = request.cookies.get(USER_COOKIE)
     item_id = request.values['id']
