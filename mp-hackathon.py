@@ -1,5 +1,4 @@
-from flask import Flask
-from flask import jsonify
+from flask import Flask, request, jsonify, redirect
 from mysql_util import within_conn
 
 app = Flask(__name__)
@@ -8,6 +7,14 @@ app.config['PROPAGATE_EXCEPTIONS'] = True
 @app.route('/')
 def hello_world():
     return 'Hello World!'
+
+@app.route('/register', methods=['POST'])
+def enter_user():
+    name = request.form['name']
+    redirect_to_index = redirect('/index')
+    response = app.make_response(redirect_to_index )
+    response.set_cookie('mp-hackaton-user',value=name)
+    return response
 
 
 @app.route('/item')
@@ -22,4 +29,4 @@ def items():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0')
