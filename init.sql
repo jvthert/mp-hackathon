@@ -34,3 +34,4 @@ INSERT INTO item (id, title, photo, description) VALUES (4, 'antiek rond tafel',
 INSERT INTO item (id, title, photo, description) VALUES (5, 'Abstract schilderij', 'http://i.marktplaats.com/00/s/NjAwWDgwMA==/z/I-oAAOSwEeFVSxzI/$_84.JPG', '60x80 cm');
 INSERT INTO item (id, title, photo, description) VALUES (6, '6-persoons Zilver Bestek', 'http://i.marktplaats.com/00/s/OTk1WDEwMjQ=/z/61gAAOSwrklVSzRw/$_84.JPG', '890 gram, gemerkt met BSF.');
 INSERT INTO item (id, title, photo, description) VALUES (7, 'Racing bike', '/img/bike1.jpeg', 'Looks cool, rides smooth');
+INSERT INTO item (id, title, photo, description) VALUES (8, 'Ray Ban zonnebril', 'http://i.marktplaats.com/00/s/NTAwWDY2Nw==/z/WWAAAOSwEeFVS2TM/$_85.JPG', 'wayfare');
