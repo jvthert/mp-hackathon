@@ -32,5 +32,4 @@ INSERT INTO item (id, title, photo, description) VALUES (2, 'samsung galaxy s5',
 INSERT INTO item (id, title, photo, description) VALUES (3, 'Nieuwe Transportfietsen bij Prijskiller.nl', 'http://i.marktplaats.com/00/s/NjUwWDY1MA==/z/X-AAAOSw8d9Uxj22/$_84.JPG', 'Mooie Transportfietsen (met en zonder versnellingen)');
 INSERT INTO item (id, title, photo, description) VALUES (4, 'antiek rond tafel', 'http://i.marktplaats.com/00/s/NzI2WDU0NQ==/z/GXwAAOSwBahVSy9t/$_84.JPG', 'Doorsnee 27,5 cm en 54 cm hoog. Het bovenblad kan rondgedraaid worden');
 INSERT INTO item (id, title, photo, description) VALUES (5, 'Abstract schilderij', 'http://i.marktplaats.com/00/s/NjAwWDgwMA==/z/I-oAAOSwEeFVSxzI/$_84.JPG', '60x80 cm');
-
-
+INSERT INTO item (id, title, photo, description) VALUES (6, '6-persoons Zilver Bestek', 'http://i.marktplaats.com/00/s/OTk1WDEwMjQ=/z/61gAAOSwrklVSzRw/$_84.JPG', '890 gram, gemerkt met BSF.');
