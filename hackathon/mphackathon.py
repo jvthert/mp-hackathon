@@ -85,6 +85,6 @@ def load_item(pos):
     return within_conn(lambda cnx, cursor: db_action(cnx, cursor))
 
 if __name__ == '__main__':
-    # app.run(host='0.0.0.0')
-    app.run(threaded=True)
+    app.run(host='0.0.0.0')
+    # app.run(threaded=True)
 
