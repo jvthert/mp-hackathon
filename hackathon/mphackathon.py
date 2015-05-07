@@ -70,6 +70,33 @@ def appriase():
     within_conn(lambda cnx, cursor: db_action(cnx, cursor))
     return ""
 
+
+@app.route("/api/results/<int:user_id>", methods=['GET'])
+def results(user_id):
+    def db_action(cnx, cursor):
+        results_query = "SELECT i.title, " \
+                       "i.photo, " \
+                       "app.price, " \
+                       "(select ROUND(avg(price)) from appraisal where item_id = i.id group by item_id) as av, " \
+                       "(select count(*) from appraisal where item_id = i.id) total from appraisal app join item i on app.item_id = i.id " \
+                       "where app.user_id = %s" % user_id
+        cursor.execute(results_query)
+        return cursor.fetchall()
+
+    result_list = within_conn(lambda cnx, cursor: db_action(cnx, cursor))
+
+    def to_json(result):
+        return {
+            "title": result[0],
+            "photo": result[1],
+            "guess": int(result[2]),
+            "numResults": int(result[3]),
+            "avg": int(result[4]),
+        }
+
+    json = map(lambda r: to_json(r), result_list)
+    return jsonify(items=json)
+
 def items_count():
     def db_action(cnx, cursor):
         cursor.execute("SELECT COUNT(*) FROM item")
