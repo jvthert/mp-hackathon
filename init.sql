@@ -27,7 +27,6 @@ CREATE TABLE appraisal (
 	price int(11) NOT NULL DEFAULT '0'
 ) ENGINE InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO item (id, title, photo, description) VALUES (3, 'Nieuwe Transportfietsen bij Prijskiller.nl', 'http://i.marktplaats.com/00/s/NjUwWDY1MA==/z/X-AAAOSw8d9Uxj22/$_84.JPG', 'Mooie Transportfietsen (met en zonder versnellingen)');
 INSERT INTO item (id, title, photo, description) VALUES (4, 'antiek rond tafel', 'http://i.marktplaats.com/00/s/NzI2WDU0NQ==/z/GXwAAOSwBahVSy9t/$_84.JPG', 'Doorsnee 27,5 cm en 54 cm hoog. Het bovenblad kan rondgedraaid worden');
 INSERT INTO item (id, title, photo, description) VALUES (5, 'Abstract schilderij', 'http://i.marktplaats.com/00/s/NjAwWDgwMA==/z/I-oAAOSwEeFVSxzI/$_84.JPG', '60x80 cm');
 INSERT INTO item (id, title, photo, description) VALUES (6, '6-persoons Zilver Bestek', 'http://i.marktplaats.com/00/s/OTk1WDEwMjQ=/z/61gAAOSwrklVSzRw/$_84.JPG', '890 gram, gemerkt met BSF.');
@@ -35,3 +34,5 @@ INSERT INTO item (id, title, photo, description) VALUES (7, 'Racing bike', '/img
 INSERT INTO item (id, title, photo, description) VALUES (8, 'Ray Ban zonnebril', 'http://i.marktplaats.com/00/s/NTAwWDY2Nw==/z/WWAAAOSwEeFVS2TM/$_85.JPG', 'wayfare');
 INSERT INTO item (id, title, photo, description) VALUES (9, 'Stoffen 2 zitter bank', 'http://i.marktplaats.com/00/s/NTQ1WDcyNg==/z/ZP4AAOSwNSxVS3lc/$_84.JPG', '1,50 breed, 65 hoog, 85 diep');
 INSERT INTO item (id, title, photo, description) VALUES (10, 'Witte retro vloerlamp', '/img/lamp1.jpeg', '1.5m hoog, verstelbaar');
+INSERT INTO item (id, title, photo, description) VALUES (11, 'Gazelle Madeo fiets', 'http://i.marktplaats.com/00/s/NDUwWDgwMA==/z/S0YAAOSwstxVQks4/$_85.JPG', '54cm frame, 24 gears, with lock');
+INSERT INTO item (id, title, photo, description) VALUES (12, 'Babboe Big Bakfiets', 'http://i.marktplaats.com/00/s/NzY4WDEwMjQ=/z/I84AAOSwPhdVLpGn/$_85.JPG', '5 gears, for 4 kids');
